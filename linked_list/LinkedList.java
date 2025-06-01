@@ -123,7 +123,7 @@ public class LinkedList {
 	}
 
 	public Node getHead() {
-		return head != null ? head : null;
+		return (head != null ? head : null);
 	}
 
 	public Node getTail() {

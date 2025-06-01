@@ -4,20 +4,23 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 class BSTNode {
+
 	int value;
 	BSTNode left, right;
 
 	public BSTNode(int value) {
 		this.value = value;
-		this.left = null;
-		this.right = null;
+		this.left = this.right = null;
+
 	}
 }
 
 public class BST {
+
 	BSTNode root;
 
 	public void insertIterative(int value) {
+
 		BSTNode newNode = new BSTNode(value);
 
 		if (root == null) {
@@ -45,8 +48,7 @@ public class BST {
 
 	public boolean searchIterative(int value) {
 		BSTNode current = root;
-		
-		
+
 		while (current != null) {
 			if (value == current.value) {
 				return true;
@@ -85,22 +87,16 @@ public class BST {
 		}
 	}
 
-	
-	
-	
 	// In-order traversal
 	public void inOrderTraversal(BSTNode node) {
 		if (node == null)
 			return;
-		
-		
+
 		inOrderTraversal(node.left);
 		System.out.print(node.value + " ");
 		inOrderTraversal(node.right);
 	}
 
-	
-	
 	// Pre-order traversal
 	public void preOrderTraversal(BSTNode node) {
 		if (node == null)
